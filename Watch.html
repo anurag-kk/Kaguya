@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kaguya Sama Love is War</title>
+	<link rel="icon" type="image/x-icon" href="fav2.jpg">
+</head>
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+.lynx:hover {
+	background-color: rgba(234,0,0,1);
+}
+
+.lynx {
+	height: 50px;
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	background-color: black;
+}
+.txt {
+	padding: 25px;
+	color: white;
+	text-align: center;
+}
+
+#funimation {
+	height: 125px;
+	width: 256px;
+	position: absolute;
+}
+
+#crunchy {
+	height: 125px;
+	width: 256px;
+	position: absolute;
+}
+
+#hulu {
+	height: 125px;
+	width: 256px;
+	position: absolute;
+
+}
+
+#netflix {
+	height: 125px;
+	width: 256px;
+	position: absolute;
+}
+
+#column {
+	width: 256px;
+	float: right;
+	position: relative;
+	height: 800px;
+	margin-right: 5%;
+}
+
+
+
+</style>
+<body onload="set()">
+	<div style="height: 50px; width: 829px; float: left; padding: 0px; margin: 0px; background-color: black;">
+		<b style="color: white; font-size: 35px; padding: 15px; padding-top: 5px; font-family: cursive;">Kaguya Sama: Love is War</b>		
+	</div>
+<a href="Updates.html">
+	<div class="lynx">
+		<b class="txt">Kommune</b>
+	</div>
+</a>
+<a href="Characters.html">	
+	<div class="lynx">
+		<b class="txt">Characters</b>
+	</div>
+</a>
+<a href="Watch.html">
+	<div class="lynx" style="background-color: rgba(234,0,0,1);">
+		<b class="txt">Watch</b>
+	</div>
+</a>
+<a href="Home.html">
+	<div class="lynx">
+		<b class="txt">Home</b>
+	</div>
+</a>
+	<div style="height: 5px; background-color: rgba(234,0,0,1); clear: both"></div>
+	<div style="background-image: url('https://images4.alphacoders.com/957/thumb-1920-957926.png'); height: 800px; margin: 0px; padding: 0px">
+		<div id="column">
+		<div id="funimation">
+			<a href="https://www.funimation.com/v/kaguya-sama-love-is-war/miyuki-shirogane-wants-to-gaze-at-the-moon-the-67th-student-council-kaguya-doesnt-want-to-say-it" target="_blank">
+			<img src="funimation.png" style="width: 256px; height: 125px">
+		</a>
+		</div>
+		<div id="crunchy" style="clear: both">
+			
+			<a href="https://www.crunchyroll.com/series/GRJ0J828Y/kaguya-sama-love-is-war" target="_blank">
+			<img src="crunchy.avif" style="width: 256px; height: 125px">
+		</a>
+		</div>
+		<div id="hulu">
+			<a href="https://www.hulu.com/series/kaguya-sama-love-is-war-da69fc06-cdea-42dc-8827-52cee194db54" target="_blank">
+			<img src="hulu.jpg" style="width: 256px; height: 125px">
+		</a>
+		</div>
+
+		<div id="netflix">
+			<a href="https://www.netflix.com/title/81061754" target="_blank">
+			<img src="netflix.png" style="width: 256px; height: 125px">
+		</a>
+		</div>
+		<div style="bottom: 0; position: absolute;">
+		<video height="150px" width="256px" bottom=0  controls autoplay muted>
+	<source src="Kaguya S4 trailer.mp4" type="video/mp4">
+		</video>
+	</div>
+	</div>
+	</div>
+
+<script>
+	function set(){
+	let id = 0;
+
+	const elemfun = document.getElementById('funimation');
+	const elemcrunch = document.getElementById('crunchy');
+	const elemhulu = document.getElementById('hulu');
+	const elemnetflix = document.getElementById('netflix');
+
+	let posfun = 0;
+	let poscrunch = 0;
+	let poshulu = 0;
+	let posnetflix = 0;
+
+	clearInterval(id);
+	idfun = setInterval(frame,5);
+	idcrunch = setInterval(frame,5);
+	idhulu = setInterval(frame,5);
+	idnetflix = setInterval(frame,5);
+
+	function frame(){
+		if(posfun == 100){
+			clearInterval(idfun);
+		}
+		else{
+			posfun++;
+			elemfun.style.top = posfun + 'px';
+		}
+
+		if(poscrunch == 200){
+			clearInterval(idcrunch);
+		}
+		else{
+			poscrunch++;
+			elemcrunch.style.top = poscrunch + 'px';
+		}
+
+		if(poshulu == 300){
+			clearInterval(idhulu);
+		}
+		else{
+			poshulu++;
+			elemhulu.style.top = poshulu + 'px';
+		}
+
+		if(posnetflix == 400){
+			clearInterval(idnetflix);
+		}
+		else{
+			posnetflix++;
+			elemnetflix.style.top = posnetflix + 'px';
+		}
+	}
+}
+</script>
+
+</body>
+</html>

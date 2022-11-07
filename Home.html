@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kaguya Sama Love is War</title>
+	<link rel="icon" type="image/x-icon" href="fav2.jpg">
+</head>
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+.lynx:hover {
+	background-color: rgba(234,0,0,1);
+}
+
+.lynx {
+	height: 50px;
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	background-color: black;
+}
+.txt {
+	padding: 25px;
+	color: white;
+	text-align: center;
+}
+
+#container {
+	float: right;
+	height: 800px;
+	width: 40px;
+	position: relative;
+}
+
+#redheart {
+	float: right;
+	bottom: 0;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	display: block;
+}
+
+#redheart2 {
+	float: right;
+	bottom: 0;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	display: block;
+}
+
+</style>
+<body onload="moveup(); moveup1();">
+	<div style="height: 50px; width: 829px; float: left; padding: 0px; margin: 0px; background-color: black;">
+		<b style="color: white; font-size: 35px; padding: 15px; padding-top: 5px; font-family: cursive;">Kaguya Sama: Love is War</b>		
+	</div>
+<a href="Updates.html">
+	<div class="lynx">
+		<b class="txt">Kommune</b>
+	</div>
+</a>
+<a href="Characters.html">	
+	<div class="lynx">
+		<b class="txt">Characters</b>
+	</div>
+</a>
+<a href="Watch.html">
+	<div class="lynx">
+		<b class="txt">Watch</b>
+	</div>
+</a>
+<a href="Home.html">
+	<div class="lynx" style="background-color: rgba(234,0,0,1);">
+		<b class="txt">Home</b>
+	</div>
+</a>
+<div style="height: 5px; background-color: rgba(234,0,0,1); clear: both"></div>
+	<div style="background-image: url('https://images4.alphacoders.com/957/thumb-1920-957926.png'); height: 800px; margin: 0px; padding: 0px">
+		<div style="float: right; width: 300px; height: 600px; background-color: rgba(0,0,0,0); margin: 50px">
+			<p style="color: white; font-family: cursive;">
+				At the renowned Shuchiin Academy, Miyuki Shirogane and Kaguya Shinomiya are the student body's top representatives. Ranked the top student in the nation and respected by peers and mentors alike, Miyuki serves as the student council president. Alongside him, the vice president Kaguya—eldest daughter of the wealthy Shinomiya family—excels in every field imaginable. They are the envy of the entire student body, regarded as the perfect couple.
+</p>
+<p style="color: white; font-family: cursive;">
+However, despite both having already developed feelings for the other, neither are willing to admit them. The first to confess loses, will be looked down upon, and will be considered the lesser. With their honor and pride at stake, Miyuki and Kaguya are both equally determined to be the one to emerge victorious on the battlefield of love!
+</p>
+<p style="color: white; font-family: cursive;">
+	Take a quick peek!
+</p>
+<video height="150px" width="300px" controls autoplay muted>
+	<source src="Opening.mp4" type="video/mp4">
+</video>
+		</div>
+		<div id="container">
+			<img src="redheart.jpg" id="redheart">
+			<div>
+				<img src="redheart.jpg" id="redheart2">
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	function moveup(){
+		let id = null;
+		const elem1 = document.getElementById('redheart');
+		const elem2 = document.getElementById('redheart2');
+		let pos1 = 0;
+		let pos2 = 0;
+		clearInterval(id);
+		id1 = setInterval(frame,2);
+		id2 = setInterval(frame,2);
+		function frame() {
+			if(pos1 == 690){
+				clearInterval(id1);
+			}
+			else {
+				pos1++;
+				elem1.style.bottom = pos1 + 'px';
+			}
+			if(pos2==400){
+				clearInterval(id2);
+			}
+			else{
+				pos2++;
+				elem2.style.bottom = pos2 + 'px';
+			}
+		}
+	}
+</script>
+
+
+
+</body>
+</html>
